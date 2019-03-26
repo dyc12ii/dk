@@ -1,0 +1,14 @@
+---
+base:
+  restTemplate:
+      connectionTimeout: 15000
+      readTimeout: 30000
+      writeTimeout: 30000
+
+server:
+  port: 18081
+
+dk:
+  web:
+    resource:
+      location: classpath:/static/

@@ -1,0 +1,19 @@
+<html>
+
+<input type="text" id="ip"/>
+<button id="bt">click to send</button>
+<span id="sp"></span>
+
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#bt").click(function () {
+            var t = $("#ip").val();
+            var data = "cookie=" + t;
+            $.post("dk", data, function (result) {
+                $("#sp").html(result);
+            });
+        });
+    })
+</script>
+</html>
