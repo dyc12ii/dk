@@ -45,3 +45,8 @@ enter.do
              GET /neteaseattendance/enter.do?appName=netease-attendance&from=QiyeYixin&companyId=1&__UUID__=194271AA3B90B24FD10D6E0DC4AC94BD HTTP/1.1
     请求携带cookie
     返回页面
+
+
+### 关于为什么要集成web
+该项目可以直接运行Application作为web项目, 其目的是更为简便的打卡, 将web服务部署至公网上, 访问index.html即可打卡
+如无公网环境, 可以考虑使用ngrok, 用内网穿透的方式
