@@ -92,11 +92,13 @@ public class DKSender {
      * desc: TODO 替换成自己抓到的信息, 尤其是经纬度和PHONE_ID, ATTENDANCE_REFERER中的UUID
     */
     interface Const {
+        // 以下可以不动, 打开的过程是先调用 GET_TOKEN 再 调用ATTENDANCE
         interface Url {
             String ATTENDANCE = "http://numenplus.yixin.im/neteaseattendance/attendance.do";
             String GET_TOKEN = "http://numenplus.yixin.im/neteaseattendance/getToken.do";
         }
 
+        //TODO ATTENDANCE_REFERER 一定要替换, 参数值来源于抓包某个请求的url, 请对比README.md中的抓包顺序
         interface Headers {
             String ATTENDANCE_REFERER = "http://numenplus.yixin.im/neteaseattendance/enter.do?appName=netease-attendance&from=QiyeYixin&companyId=1&__UUID__=8FDCEA8AC47EDD1C91FD9D5EA5720CC7";
             String UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16D39 yxwork ios/310";
@@ -107,10 +109,11 @@ public class DKSender {
             String CONTENT_TYPE = "application/x-www-form-urlencoded";
         }
 
+        //TODO 以下三个参数均需替换, 分别是 经度, 纬度, 手机id
         interface Body {
             String LATITUDE = "i-=m%vvmv+v-vn-%ik";
             String LONGITUDE = "mn-=n-mv-iipiqmvn%";
-            String PHONE_ID = "xxx"; //TODO
+            String PHONE_ID = "xxx";
         }
     }
 
